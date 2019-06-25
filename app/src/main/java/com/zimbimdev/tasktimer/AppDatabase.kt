@@ -3,7 +3,6 @@ package com.zimbimdev.tasktimer
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.os.FileObserver.CREATE
 import android.util.Log
 
 /**basic db class for the app
@@ -38,4 +37,15 @@ internal class AppDatabase private constructor(context: Context) :
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    companion object : SingletonHolder<AppDatabase, Context>(::AppDatabase)
+//    companion object {
+//        @Volatile
+//        private var instance: AppDatabase? = null
+//
+//        fun getInstance(context: Context): AppDatabase =
+//            instance ?: synchronized(this) {
+//                instance ?: AppDatabase(context).also { instance = it }
+//            }
+//    }
 }
