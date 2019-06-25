@@ -1,6 +1,5 @@
 package com.zimbimdev.tasktimer
 
-
 import android.util.Log
 
 /**
