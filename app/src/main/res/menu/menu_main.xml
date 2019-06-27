@@ -2,8 +2,29 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.zimbimdev.tasktimer.MainActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never"/>
+    <item
+            android:title="@string/menutitle_addTask"
+            android:icon="@android:drawable/ic_menu_add"
+            app:showAsAction="ifRoom"
+            android:orderInCategory="10"/>
+    <item
+            android:title="@string/menutitle_showDurations"
+            android:icon="@android:drawable/ic_menu_view"
+            app:showAsAction="ifRoom"
+            android:orderInCategory="20"/>
+    <item
+            android:id="@+id/menumain_settings"
+            android:title="@string/menutitle_settings"
+            app:showAsAction="never"
+            android:orderInCategory="30"/>
+    <item
+            android:title="@string/menutitle_showAbout"
+            android:icon="@android:drawable/ic_menu_info_details"
+            app:showAsAction="ifRoom"
+            android:orderInCategory="40"/>
+    <item
+            android:title="@string/menutitle_generate"
+            app:showAsAction="never"
+            android:orderInCategory="50"
+            android:visible="false"/>
 </menu>
