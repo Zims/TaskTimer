@@ -6,7 +6,8 @@
             android:title="@string/menutitle_addTask"
             android:icon="@android:drawable/ic_menu_add"
             app:showAsAction="ifRoom"
-            android:orderInCategory="10"/>
+            android:orderInCategory="10"
+            android:id="@+id/menumain_task"/>
     <item
             android:title="@string/menutitle_showDurations"
             android:icon="@android:drawable/ic_menu_view"
