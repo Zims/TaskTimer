@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), AddEditFragment.OnSaveClicked {
         //create new fragment to edit the task
         val newFragment = AddEditFragment.newInstance(task)
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment, newFragment)
+            .replace(R.id.task_details_container, newFragment)
             .commit()
 
         Log.d(TAG, "taskEditRequest ends")
