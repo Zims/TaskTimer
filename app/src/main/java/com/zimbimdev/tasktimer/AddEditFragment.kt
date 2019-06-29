@@ -8,6 +8,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_add_edit.*
+
 private const val TAG = "AddEditFragment"
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_TASK = "task"
@@ -19,7 +21,6 @@ private const val ARG_TASK = "task"
  * to handle interaction events.
  * Use the [AddEditFragment.newInstance] factory method to
  * create an instance of this fragment.
- *
  */
 class AddEditFragment : Fragment() {
     private var task: Task? = null
@@ -39,6 +40,14 @@ class AddEditFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_edit, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onActivityCreated starts")
+        super.onActivityCreated(savedInstanceState)
+        addedit_save.setOnClickListener {
+            listener?.onSaveClicked()
+        }
     }
 
     override fun onAttach(context: Context) {
