@@ -7,7 +7,7 @@
             android:icon="@android:drawable/ic_menu_add"
             app:showAsAction="ifRoom"
             android:orderInCategory="10"
-            android:id="@+id/menumain_task"/>
+            android:id="@+id/menumain_addTask"/>
     <item
             android:title="@string/menutitle_showDurations"
             android:icon="@android:drawable/ic_menu_view"
